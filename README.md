@@ -20,7 +20,7 @@ C:\Users\MaxMustermann>git --version
 git version 2.36.1.windows.1
 ````
 
-Bedingungen:
+**Bedingungen:**
 - Die Shell gibt keinen offensichtlichen Fehler aus, wie z.B. "Der Befehl ist entweder falsch geschrieben ..."
 - Die Version beginnt mit "2." also z.B. "2.36.1.windows.1"
 
@@ -40,7 +40,7 @@ Java(TM) SE Runtime Environment 18.9 (build 11.0.1+13-LTS)
 Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.1+13-LTS, mixed mode)
 ````
 
-Bedingungen:
+**Bedingungen:**
 - Die Shell gibt keinen offensichtlichen Fehler aus, wie z.B. "Der Befehl ist entweder falsch geschrieben ..."
 - Die Version beginnt mit "11." oder höher also z.B. "11.0.1" oder "17.0"
  
@@ -62,7 +62,7 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (3/3), done.
 ````
 
-Bedingungen:
+**Bedingungen:**
 - Die Shell gibt keinen offensichtlichen Fehler aus, wie z.B. "Der Befehl ist entweder falsch geschrieben ..."
 - Ein neues Verzeichnis namens "preflight-check-java" wurde auf Ihrer Festplatte angelegt
 
@@ -101,6 +101,6 @@ Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons
 [INFO] ------------------------------------------------------------------------
 ````
 
-Bedingungen:
+**Bedingungen:**
 - Die Shell gibt keinen offensichtlichen Fehler aus, wie z.B. "Der Befehl ist entweder falsch geschrieben ..."
 - Nach einer Menge an Ausgaben kommt sehr weit unten "BUILD SUCCESS"
