@@ -1,9 +1,11 @@
 # Pre-flight Check Java
 
-Ziel dieses Repositories ist ein **technischer Check** Ihrer Infrastruktur, sodass ein Java-basiertes Training
+Ziel dieses Repositories ist ein **technischer Check** Ihrer Infrastruktur, sodass ein
+Java-basiertes Training
 möglichst reibungslos abläuft.
 
-Gehen Sie die Schritte bitte der Reihe nach durch und geben Sie Feedback an Ihre betreuende Person, wenn ein Check 
+Gehen Sie die Schritte bitte der Reihe nach durch und geben Sie Feedback an Ihre betreuende Person,
+wenn ein Check
 nicht erfolgreich abgeschlossen werden konnte.
 
 ## Check 1 -- Git
@@ -15,13 +17,16 @@ git --version
 ````
 
 Eine mögliche Ausgabe ist:
+
 ````shell
 C:\Users\MaxMustermann>git --version
 git version 2.36.1.windows.1
 ````
 
 **Bedingungen:**
-- Die Shell gibt keinen offensichtlichen Fehler aus, wie z.B. "Der Befehl ist entweder falsch geschrieben ..."
+
+- Die Shell gibt keinen offensichtlichen Fehler aus, wie z.B. "Der Befehl ist entweder falsch
+  geschrieben ..."
 - Die Version beginnt mit "2." also z.B. "2.36.1.windows.1"
 
 ## Check 2 -- Java
@@ -33,6 +38,7 @@ java -version
 ````
 
 Eine mögliche Ausgabe ist:
+
 ````shell
 C:\Users\MaxMustermann>java -version
 java version "11.0.1" 2018-10-16 LTS
@@ -41,9 +47,11 @@ Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.1+13-LTS, mixed mode)
 ````
 
 **Bedingungen:**
-- Die Shell gibt keinen offensichtlichen Fehler aus, wie z.B. "Der Befehl ist entweder falsch geschrieben ..."
+
+- Die Shell gibt keinen offensichtlichen Fehler aus, wie z.B. "Der Befehl ist entweder falsch
+  geschrieben ..."
 - Die Version beginnt mit "11." oder höher also z.B. "11.0.1" oder "17.0"
- 
+
 ## Check 3 -- Clonen eines GitHub Repositories
 
 Clone Sie dieses Repository auf Ihren Rechner (in einem Verzeichnis Ihrer Wahl):
@@ -53,6 +61,7 @@ git clone https://github.com/tauinger-de/preflight-check-java.git
 ````
 
 Eine mögliche Ausgabe ist:
+
 ````shell
 D:\Temp>git clone https://github.com/tauinger-de/preflight-check-java.git
 Cloning into 'preflight-check-java'...
@@ -63,11 +72,12 @@ Receiving objects: 100% (3/3), done.
 ````
 
 **Bedingungen:**
-- Die Shell gibt keinen offensichtlichen Fehler aus, wie z.B. "Der Befehl ist entweder falsch geschrieben ..."
+
+- Die Shell gibt keinen offensichtlichen Fehler aus, wie z.B. "Der Befehl ist entweder falsch
+  geschrieben ..."
 - Ein neues Verzeichnis namens "preflight-check-java" wurde auf Ihrer Festplatte angelegt
 
-
-## Check 4 -- Bauen einer Java Anwendung mit Maven
+## Check 4 -- Bauen einer Java Anwendung mit Maven oder Gradle
 
 Wechseln Sie in das eben angelegte Verzeichnis.
 
@@ -75,13 +85,15 @@ Wechseln Sie in das eben angelegte Verzeichnis.
 cd preflight-check-java
 ````
 
-Dort führen Sie folgenden Befehl aus:
+Dort führen Sie **einen** der folgenden Befehle aus (falls ein anderes Terminal als die
+Windows Eingabeaufforderung genutzt wird, so muss ggf. noch ein `./` o.ä. vorangestellt werden):
 
 ````shell
-.\mvnw verify
+mvnw package
+gradlew build
 ````
 
-Die Ausgabe hier kann sehr lang sein. Der Schluss könnte wie folgt aussehen:
+Die Ausgabe bei Maven kann sehr lang sein. Der Schluss könnte wie folgt aussehen (wiederum Maven):
 
 ````shell
 ...
@@ -102,5 +114,8 @@ Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons
 ````
 
 **Bedingungen:**
-- Die Shell gibt keinen offensichtlichen Fehler aus, wie z.B. "Der Befehl ist entweder falsch geschrieben ..."
-- Nach einer Menge an Ausgaben kommt sehr weit unten "BUILD SUCCESS"
+
+- Die Shell gibt keinen offensichtlichen Fehler aus, wie z.B. "Der Befehl ist entweder falsch
+  geschrieben ..."
+- Nach einer Menge an Ausgaben kommt sehr weit unten "BUILD SUCCESS" (Maven) oder "BUILD
+  SUCCESSFUL" (Gradle).
